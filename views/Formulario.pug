@@ -2,8 +2,9 @@ doctype html
 html
   head
     meta(charset="UTF-8")
-    link(rel='stylesheet', href='/Styles/formularios.css')
     title Formulario
+    style
+      include ./Styles/formularios.css
   body
     h1 Formulario
     form(action="/submit", method="POST")
@@ -11,7 +12,7 @@ html
       input(type="text", id="name", name="name", required=true)
       br
       label(for="age") Edad:
-      input(type="number", id="age", name="age", required=true, min="1") 
+      input(type="number", id="age", name="age", required=true, min="1")
       br
       label(for="email") Correo electrónico:
       input(type="email", id="email", name="email", required=true)
